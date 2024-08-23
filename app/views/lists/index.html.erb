@@ -1,0 +1,14 @@
+
+<div class="container">
+  <h1>Here are our Movieslists</h1>
+
+
+  <% @lists.each do |list|%>
+  <ul>
+  <li class="list-group-item"><%= link_to list.name, list_path(list)%></li>
+  </ul>
+  <%end%>
+
+
+
+</div>

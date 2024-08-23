@@ -1,0 +1,10 @@
+<div class="container">
+<h2>Here you can add a new Movie List:</h2>
+
+<div class="container">
+  <%= simple_form_for @list do |f| %>
+  <%= f.input :name, placeholde: "What ist the subject of the list?" %>
+  <%= f.button :submit, class:"btn-success" %>
+  <% end %>
+
+</div>

@@ -1,0 +1,29 @@
+<div class="container d-flex ">
+<p> Logo </p>
+<nav class="navbar bg-light">
+  <form class="container-fluid justify-content-start">
+    <button class="btn btn-outline-success me-2" type="button">My lists</button>
+    <button class="btn btn-outline-secondary me-2" type="button">My bookmarks</button>
+  </form>
+</nav>
+</div>
+
+
+<div class="container">
+  <h1>Here are our Movies</h1>
+
+
+  <% @movies.each do |movie|%>
+  <ul>
+  <li class="list-group-item"><%= link_to movie.title, movie_path(movie)%></li>
+  </ul>
+  <%end%>
+
+  <ul>
+    <% @movies..each do |review| %>
+      <li class="list-group-item">Rating: <%= review.rating %></li>
+      <li class="list-group-item">Customer Review: <%= review.content %></li>
+    <% end %>
+  </ul>
+
+</div>

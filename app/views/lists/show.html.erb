@@ -1,0 +1,30 @@
+
+<div class="container d-flex">
+
+<h1>List: <%=@list.name%></h1>
+
+<%= link_to "Add new Bookmark", new_list_bookmark_path(@list) %>
+</div>
+
+<div class="container">
+  <div class="container d-flex">
+
+      <% @bookmarks.each do |bookmark|%>
+      <ul>
+        <li class="list-group-item" id="moviecard">
+
+          <%= image_tag(bookmark.movie.poster_url) %>
+          <%= bookmark.movie.title %>
+          <%= bookmark.movie.rating %>
+          <%= bookmark.movie.overview %>
+          <br>
+          <br>
+
+          <%= link_to "❌", list_bookmark_path(@list,bookmark), data: {turbo_method: :delete, turbo_confirm:"Are you really sure you want to delete this Bookmark?"} %>
+          <%= bookmark.comment%>
+        </li>
+      </ul>
+      <%end%>
+
+  </div>
+</div>

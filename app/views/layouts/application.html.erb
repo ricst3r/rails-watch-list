@@ -11,6 +11,15 @@
   </head>
 
   <body>
+    <%= render 'shared/banner' %>
+    <%= render 'shared/menu' %>
+
+
     <%= yield %>
+
+    <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+
+  <% end %>
   </body>
 </html>

@@ -4,6 +4,7 @@
 <div class="container">
   <%= simple_form_for @list do |f| %>
   <%= f.input :name, placeholde: "What ist the subject of the list?" %>
+  <%= f.input :photo, as: :file %>
   <%= f.button :submit, class:"btn-success" %>
   <% end %>
 

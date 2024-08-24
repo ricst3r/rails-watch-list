@@ -1,0 +1,12 @@
+#listcard {
+  height: 150px;
+  text-align: center;
+  align-content: center;
+}
+
+
+#listcontainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+}

@@ -2,16 +2,14 @@
 <div class="container">
   <h1>Here are our Movieslists</h1>
 
+  <div class="container grid" id="listcontainer">
+    <% @lists.each do |list|%>
 
-  <% @lists.each do |list|%>
-  <div class="container" id="listcontainer">
-    <ul>
-      <li class="list-group-item"><div class="container" id="listcard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path '7xfs9f6pvaejotru0i3546ayee10', crop: :scale %>')"><%= link_to list.name, list_path(list)%></div></li>
-    </ul>
+      <ul>
+        <li class="list-group-item"><div class="container" id="listcard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path '@list.photo.key', crop: :scale %>')"><%= link_to list.name, list_path(list)%></div></li>
+      </ul>
+      <%end%>
   </div>
-  <%end%>
-
-
 
 </div>
 

@@ -1,6 +1,7 @@
 class ListsController < ApplicationController
   def index
     @lists = List.all
+    @img = List.last.photo.key
   end
 
   def show

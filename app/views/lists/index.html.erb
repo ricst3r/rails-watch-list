@@ -6,7 +6,7 @@
     <% @lists.each do |list|%>
 
       <ul>
-        <li class="list-group-item"><div class="container" id="listcard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path '@list.photo.key', crop: :scale %>')"><%= link_to list.name, list_path(list)%></div></li>
+        <li class="list-group-item"><div class="container" id="listcard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @img, crop: :crop %>')"><%= link_to list.name, list_path(list)%></div></li>
       </ul>
       <%end%>
   </div>
